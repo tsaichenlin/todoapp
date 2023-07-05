@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Todo App</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+
+  <body>
+    <main class="app">
+      <section class="greeting">
+        <h2 class="title">
+          What's Up, <input type="text" id="name" placeholder=" name here">
+        </h2>
+      </section>
+
+      <section class="create-todo">
+        <h3>CREATE A TODO</h3>
+        <form id="new-todo-form">
+          <input 
+            type="text"
+            name="content"
+            id="content"            
+            placeholder="e.g. study for exam"/>
+          
+          <h4>Pick a cateogry</h4>
+          <div class="options">
+
+            <label>
+              <input 
+                type="radio"
+                name="category" 
+                id="category1"
+                value="school"/>
+
+                <span class="bubble business"></span>
+                <div>School</div>
+            </label>
+
+            <label>
+              <input 
+                type="radio"
+                name="category" 
+                id="category2"
+                value="personal"/>
+
+                <span class="bubble personal"></span>
+                <div>Personal</div>
+            </label>
+
+          </div>
+
+          <input type="submit" value="Add todo" />
+        </form>
+      </section>
+
+      <section class="todo-list">
+        <div class="inline">
+          <h3>TODO LIST</h3>
+          <div class="searchBar">
+            <input 
+            type="text"
+            id="searchinput"            
+            placeholder="search a todo"/>
+            <button id="clearbutton" >x</button>
+          </div>
+         
+        </div>
+
+        <div class="filters">
+          <text style="font-size: 15px; color: #888;"> Filters: </text>          
+          <button class="filter" id="Hide">Completed</button>
+          <button class="filter" id="Show" >Incomplete</button>
+          <button class="filter1" id="SchoolOnly">School</button>
+          <button class="filter2" id="PersonalOnly">Personal</button>
+          <button class="filter" id="All" >All</button>
+        </div>
+
+    
+        <div class="list" id="todo-list"></div>
+        
+      </section>
+    </main>
+    <script src="main.js"></script>
+
+  </body>
+</html>
